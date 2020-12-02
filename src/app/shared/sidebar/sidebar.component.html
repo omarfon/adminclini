@@ -1,0 +1,65 @@
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="true">
+            <i class="mdi mdi-account-star"></i>
+            <span class="hide-menu">Doctores
+              <span class="label label-rouded label-info pull-right">7</span>
+            </span>
+          </a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/create']">Crear Doctor</a></li>
+            <li><a [routerLink]="['/create-hours']">Crear Horarios</a></li>
+            <li><a [routerLink]="['/block-hours']">Bloquear Horarios</a></li>
+            <li><a [routerLink]="['/list-doctors']">Listar Doctores</a></li>
+            <li><a [routerLink]="['/spots']">Asignar Consultorios</a></li>
+            <li><a [routerLink]="['/pending-dates']">Citas Pendientes</a></li>
+            <li><a [routerLink]="['/total-dates']">Citas Realizadas</a></li>
+          </ul>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="true">
+            <i class="mdi mdi-account-star"></i>
+            <span class="hide-menu">Especialidades
+              <span class="label label-rouded label-info pull-right">3</span>
+            </span>
+          </a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/specialtyes']">Crear especialidades</a></li>
+            <li><a [routerLink]="['/provisions']">Tipos de prestaciones</a></li>
+            <li><a [routerLink]="['/prices']">Precios Prestaciones</a></li>
+            <!-- <li><a [routerLink]="['/citas-previas']">Citas previas</a></li> -->
+          </ul>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="true"><i class="mdi mdi-medical-bag"></i><span
+              class="hide-menu">Pacientes<span class="label label-rouded label-success pull-right">2</span></span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/doctoresall']">Listado de Pacientes</a></li>
+            <li><a [routerLink]="['/pacientesdoctor']">Historias Clínicas</a></li>
+          </ul>
+        </li>
+        <!--        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
+              class="mdi mdi-square-inc-cash"></i><span class="hide-menu">Cuentas <span
+                class="label label-rouded label-info pull-right">2</span></span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/doctoresall']">Pagos pendientes</a></li>
+            <li><a [routerLink]="['/pacientes-doctor']">Citas Pendientes</a></li>
+          </ul>
+        </li> -->
+        <!--      <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
+              class="mdi mdi-bank"></i><span class="hide-menu">Disponibilidad <span
+                class="label label-rouded label-info pull-right">2</span></span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a [routerLink]="['/doctoresall']">Consultorios</a></li>
+            <li><a [routerLink]="['/pacientes-doctor']">Salas</a></li>
+          </ul>
+        </li> -->
+
+      </ul>
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>

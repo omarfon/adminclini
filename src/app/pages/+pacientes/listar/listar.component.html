@@ -1,0 +1,138 @@
+<!-- <div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row"> -->
+<div class="col-md-12 col-lg12">
+  <!--     <div class="row page-titles">
+          <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Lista de pacientes</h3>
+          </div>
+          <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a [routerLink]="['/home']">Home</a>
+              </li>
+              <li class="breadcrumb-item">Listar</li>
+            </ol>
+          </div>
+    
+        </div> -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card bg-inverse">
+        <div class="card-body">
+          <div class="d-flex">
+            <h5 class="text-white m-b-15">Busqueda de pacientes:</h5>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 ">
+              <div class="row m-b-10">
+                <!-- <div class="col-lg-3 ">
+                        <div class="form-group">
+                          <input type="text" id="nombre" class="form-control" placeholder="Nombre">
+                        </div>
+                      </div> -->
+                <div class="col-lg-3 ">
+                  <div class="form-group">
+                    <!-- <label class="control-label">Nombre</label> -->
+                    <input type="text" id="nombre" class="form-control" placeholder="Apellido">
+                    <!-- <small class="form-control-feedback"> This is inline help </small> -->
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <!-- <label class="control-label">Dni</label> -->
+                    <input type="text" id="nombre" class="form-control" placeholder="Dni">
+                    <!-- <small class="form-control-feedback"> This is inline help </small> -->
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <!--    <label class="control-label">Nº Historia</label> -->
+                    <input type="text" id="nombre" class="form-control" placeholder="Nº Historia">
+                    <!-- <small class="form-control-feedback"> This is inline help </small> -->
+                  </div>
+                </div>
+                <div class="col-lg-3 text-right">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <button class="btn btn-block btn-rounded btn-info">Buscar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="table-responsive m-t-20">
+    <table class="table color-table muted-table">
+      <div class="row">
+        <div class="col-lg-1 col-md-1 center">
+          <p class="tituloCabecera">Imagen</p>
+        </div>
+        <div class="col-lg-3 col-md-3 center">
+          <p class="tituloCabecera">Nombre</p>
+        </div>
+        <div class="col-lg-2 col-md-2 center">
+          <p class="tituloCabecera">Dni</p>
+        </div>
+        <div class="col-lg-3 col-md-3 center">
+          <p class="tituloCabecera">Email</p>
+        </div>
+        <div class="col-lg-2 col-md-2 center">
+          <p class="tituloCabecera">Historia</p>
+        </div>
+        <div class="col-lg-1 col-md-1 center">
+          <p class="tituloCabecera">Acciones</p>
+        </div>
+      </div>
+    </table>
+  </div>
+  <div class="card border" *ngFor="let usuario of patients">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-1 col-lg-1 containerImg center">
+          <img src="{{usuario.img}}" alt="user-img" class="img-circle" (error)="errorHandler($event)" alt="">
+        </div>
+        <div class="col-md-3 col-lg-3 center">
+          {{usuario.data.nombre}} {{usuario.data.apellidop}} {{usuario.data.apellidom}}
+        </div>
+        <div class="col-md-2 col-lg-2 center">
+          {{usuario.data.dni}}
+        </div>
+        <div class="col-md-3 col-lg-3 center">
+          {{usuario.data.infoContacto.email}}
+        </div>
+        <div class="col-md-2 col-lg-2 center">
+          HC{{usuario.data.dni}}
+        </div>
+        <div class="col-md-1 col-lg-1 center">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="openModalDate(usuario)">
+              <mat-icon>assignment</mat-icon>
+              <span>crear cita</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>insights</mat-icon>
+              <span>ver historial</span>
+            </button>
+            <!--  <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button> -->
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--     </div>
+  </div>
+</div> -->

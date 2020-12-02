@@ -1,0 +1,112 @@
+<div class="row">
+    <div class="col-12">
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+               
+            </div>
+            <div class="col-md-7 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a [routerLink]="['/pages']">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">citas pendientes</li>
+                </ol>
+            </div>
+        
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Citas Pendientes</h4>
+                <h6 class="card-subtitle"></h6>
+                <div class="table-responsive">
+                    <table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list" data-page-size="10">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nombre</th>
+                                <th>Nº Historia</th>
+                                <th>Estado</th>
+                                <th>Edad</th>
+                                <th>Especialidad</th>
+                                <th>Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr (click)="openModalDetailPatient()">
+                                <td>1</td>
+                                <td>Juana Perez Perez</td>
+                                <td>HC40283800-01</td>
+                                <td><span class="label label-success">consulta</span> </td>
+                                <td>31</td>
+                                <td>Medicina General</td>
+                                <td>10:20</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Norma García</td>
+                                <td>HC10203040-01</td>
+                                <td><span class="label label-warning">pre-consulta</span></td>
+                                <td>29</td>
+                                <td>Giencología</td>
+                                <td>10:40</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Maria Elena Rivera</td>
+                                <td>HC44539552-02</td>
+                                <td class="center"><span class="label label-info">en espera</span></td>
+                                <td>38</td>
+                                <td>Ginecología</td>
+                                <td>11:00</td>
+                              
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Juan Camaney Sanchez</td>
+                                <td>HC38394941-01</td>
+                                <td class="center"><span class="label label-inverse">ausente</span></td>
+                                <td>55</td>
+                                <td>Traumatología</td>
+                                <td>11:00</td>
+                             
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Rodolfo Routted</td>
+                                <td>HC67456789-01</td>
+                                <td class="center"><span class="label label-inverse">ausente</span></td>
+                                <td>23</td>
+                                <td>Medicina General</td>
+                                <td>11:20</td>
+                             
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Jhonatan Del Rio</td>
+                                <td>HC78456789-01</td>
+                                <td class="center"><span class="label label-inverse">ausente</span></td>
+                                <td>29</td>
+                                <td>Psicología</td>
+                                <td>11:40</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Jorge Yayico</td>
+                                <td>HC23456789-01</td>
+                                <td class="center"><span class="label label-danger">cancelado</span></td>
+                                <td>35</td>
+                                <td>Urología</td>
+                                <td>11:40</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+</div>
