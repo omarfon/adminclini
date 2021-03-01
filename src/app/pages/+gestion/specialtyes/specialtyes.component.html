@@ -1,1 +1,74 @@
-<p>specialtyes works!</p>
+
+<div class="row">
+    <div class="col-lg-5 col-md-5">
+        <div class="card">
+            <div class="card-body">
+               <div class="row">
+                 <div class="col-12">
+                   <h5>Agregar Especialidades </h5>
+                 </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label class="control-label">Nombre</label>
+                      <input type="text" #nombre ([ngModel])="nombre" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label class="control-label">Nombre Corto</label>
+                      <input type="text" #shortname ([ngModel])="shortname" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-6"></div>
+                  <div class="col-6 containerButton">
+                      <button class="btn btn-warning btn-block boton" (click)="saveSpecialty(nombre, shortname)">
+                        Guardar Especialidad
+                      </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-7 col-md-7">
+    <div class="card">
+      <div class="card-body">
+            <div class="col-12">
+              <h5>Las Especialidades</h5>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Nombre</th>
+                              <th>Nombre corto</th>
+                              <th>Edición</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor=" let e of especialidades; let i = index">
+                              <td>{{i + 1}}</td>
+                              <td>{{e.payload.doc.data().name}}</td>
+                              <td>{{e.payload.doc.data().short_name}}</td>
+                              <td> 
+                                <button class="btn btn-light btn-circle btnContainer"
+                                (click)="editSpecialty(e)">
+                                  <span class="material-icons botonEdit"> mode</span>
+                                </button>
+                                <button class="btn btn-light btn-circle  btnContainer" (click)="deleteSpecialty(e)">
+                                  <span class="material-icons botonEdit">delete</span>
+                                </button>
+                                <button class="btn btn-light btn-circle  btnContainer" (click)="seeDoctors(e)">
+                                  <span class="material-icons botonEdit">book</span>
+                                </button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+         </div>
+          </div>
+      </div>
+  </div>
+

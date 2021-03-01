@@ -13,9 +13,7 @@ import { CrearComponent } from './pages/+pacientes/crear/crear.component';
 import { ListarComponent } from './pages/+pacientes/listar/listar.component';
 import { DetailUserComponent } from './pages/+pacientes/detail-user/detail-user.component';
 import { CitasComponent } from './pages/+pacientes/citas/citas.component';
-import { DoctoresallComponent } from './doctores/doctoresall/doctoresall.component';
 import { CrearcitaComponent } from './pages/+pacientes/crearcita/crearcita.component';
-import { PacientesdoctorComponent } from './doctores/pacientesdoctor/pacientesdoctor.component';
 import { SeguimientoComponent } from './pages/+pacientes/seguimiento/seguimiento.component';
 import { CreateComponent } from './pages/+doctors/create/create.component';
 import { CreateHoursComponent } from './pages/+doctors/create-hours/create-hours.component';
@@ -27,6 +25,8 @@ import { SpotsComponent } from './pages/+doctors/spots/spots.component';
 import { SpecialtyesComponent } from './pages/+gestion/specialtyes/specialtyes.component';
 import { ProvisionsComponent } from './pages/+gestion/provisions/provisions.component';
 import { PricesComponent } from './pages/+gestion/prices/prices.component';
+import { ListAllComponent } from './pages/+pacientes/list-all/list-all.component';
+
 
 
 
@@ -45,8 +45,7 @@ const routes: Routes = [
       { path: 'crear', component: CrearComponent },
       { path: 'detailuser', component: DetailUserComponent },
       { path: 'citas', component: CitasComponent },
-      { path: 'doctoresall', component: DoctoresallComponent },
-      { path: 'pacientesdoctor', component: PacientesdoctorComponent },
+      { path: 'pacientes', component: ListAllComponent },
       { path: 'seguimiento', component: SeguimientoComponent },
       { path: 'create', component: CreateComponent },
       { path: 'create-hours', component: CreateHoursComponent },
@@ -58,6 +57,7 @@ const routes: Routes = [
       { path: 'specialtyes', component: SpecialtyesComponent },
       { path: 'provisions', component: ProvisionsComponent },
       { path: 'prices', component: PricesComponent },
+      { path: 'provisions', component: ProvisionsComponent },
     ]
   },
   {

@@ -1,0 +1,23 @@
+<h4>Listado de Pacientes</h4>
+
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-xlg-4" *ngFor="let p of patients">
+        <div class="card card-body" (click)="openModalData()"> 
+            <div class="row">
+                <div class="col-md-4 col-lg-3 text-center">
+                    <a href="app-contact-detail.html"><img src="../assets/images/users/1.jpg" alt="user" class="img-circle img-responsive"></a>
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <h3 class="box-title m-b-0">{{p.data.nombre}} {{p.data.apellidop}} {{p.data.apellidom}}</h3> 
+                    <small>DNI: {{p.data.dni}}</small>
+                    <address>
+                        Email: {{p.data.infoContacto.email}}
+                        <br/>
+                        <br/>
+                        <abbr title="Phone">P:</abbr> {{p.data.infoContacto.celular}}
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

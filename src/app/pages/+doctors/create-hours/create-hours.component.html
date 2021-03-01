@@ -1,178 +1,176 @@
 <div class="col-sm-12 col-lg-12">
   <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-      <h3 class="text-themecolor">Crear Agenda Doctor</h3>
+      <h5 class="text-themecolor">Crear Agenda Doctor</h5>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-body">
-          <div class="form-group">
-            <label class="control-label">Buscar Doctor</label>
-            <select class="select2 form-control custom-select" style="width: 100%; height:36px;">
-              <option>Digita el doctor</option>
-              <option value="AK">Juan Perez</option>
-              <option value="HI">Miguel Soto</option>
-              <option value="CA">California</option>
-              <option value="NV">Nevada</option>
-              <option value="OR">Oregon</option>
-              <option value="WA">Washington</option>
-              <option value="AZ">Arizona</option>
-              <option value="CO">Colorado</option>
-              <option value="ID">Idaho</option>
-              <option value="MT">Montana</option>
-              <option value="NE">Nebraska</option>
-              <option value="NM">New Mexico</option>
-              <option value="ND">North Dakota</option>
-              <option value="UT">Utah</option>
-              <option value="WY">Wyoming</option>
-              <option value="AL">Alabama</option>
-              <option value="AR">Arkansas</option>
-              <option value="IL">Illinois</option>
-              <option value="IA">Iowa</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="MN">Minnesota</option>
-              <option value="MS">Mississippi</option>
-              <option value="MO">Missouri</option>
-              <option value="OK">Oklahoma</option>
-              <option value="SD">South Dakota</option>
-              <option value="TX">Texas</option>
-              <option value="TN">Tennessee</option>
-              <option value="WI">Wisconsin</option>
-              <option value="CT">Connecticut</option>
-              <option value="DE">Delaware</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="IN">Indiana</option>
-              <option value="ME">Maine</option>
-              <option value="MD">Maryland</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MI">Michigan</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NY">New York</option>
-              <option value="NC">North Carolina</option>
-              <option value="OH">Ohio</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="VT">Vermont</option>
-              <option value="VA">Virginia</option>
-              <option value="WV">West Virginia</option>
-            </select>
+    <form action="" [formGroup]="formularioDoctorDate">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5>Doctor y tipo de consulta</h5>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label class="control-label">Buscar Doctor</label>
+                  <select class="select2 form-control custom-select"  formControlName="doctor" style="width: 100%; height:36px;">
+                    <option>Digita el doctor</option>
+                    <option *ngFor="let doctor of doctors" [value]="doctor.data.codIntern">{{doctor.data.name}} {{doctor.data.lastname}} {{doctor.data.lastname2}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label class="control-label">Escoge el tipo de consulta</label>
+                  <select class="select2 form-control custom-select" style="width: 100%; height:36px;" formControlName="tipoconsulta">
+                    <option disabled>Busca el tipo de consulta</option>
+                    <option [value]="p.id" *ngFor="let p of prestaciones">{{p.payload.doc.data().nombre}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-lg-7">
-              <h5>Horarios de Consulta</h5>
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <input id="lun" type="checkbox" class="filled-in">
-                      <label for="lun">Lun</label>
+        <div class="card">
+          <div class="card-body">
+            <h5>Meses de duración</h5>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col-12">
+                    <label for="">Ingresa el mes desde</label>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input type="date" class="form-control" formControlName="init">
                     </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <input id="Mar" type="checkbox" class="filled-in">
-                      <label for="Mar">Mar</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <input id="Mie" type="checkbox" class="filled-in">
-                      <label for="Mie">Mie</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <label class="control-label"></label>
-                      <input id="Jue" type="checkbox" class="filled-in">
-                      <label for="Jue">Jue</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <input id="Vie" type="checkbox" class="filled-in">
-                      <label for="Vie">Vie</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <input id="Sab" type="checkbox" class="filled-in">
-                      <label for="Sab">Sab</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-success">
-                      <input id="Dom" type="checkbox" class="filled-in">
-                      <label for="Dom">Dom</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="control-label">De</label>
-                    <input type="time" id="inicio" class="form-control" placeholder="08:00" formControlName="name">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="control-label">A</label>
-                    <input type="time" id="final" class="form-control" placeholder="20:00" formControlName="name">
                   </div>
                 </div>
               </div>
-
-            </div>
-            <div class="col-lg-5">
-              <h5>Duración de Consulta</h5>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <label class="control-label">Cada</label>
-                    <select class="form-control custom-select">
-                      <option value="">10 minutos</option>
-                      <option value="">15 minutos</option>
-                      <option value="">20 minutos</option>
-                      <option value="">30 minutos</option>
-                      <option value="">40 minutos</option>
-                      <option value="">50 minutos</option>
-                      <option value="">1 hora</option>
-                    </select>
+              <div class="col">
+                <div class="row">
+                  <div class="col-12">
+                    <label for="">Ingresa el mes hasta</label>
                   </div>
-                </div>
-                <div class="col-lg-12">
-                  <button class="btn btn-success btn-block">
-                    Generar Agenda
-                  </button>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input type="date" class="form-control"  formControlName="end">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-7">
+                <h5>Horarios de Consulta</h5>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <input id="lun" type="checkbox" class="filled-in" formControlName="lun">
+                        <label for="lun">Lun</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <input id="Mar" type="checkbox" class="filled-in" formControlName="mar">
+                        <label for="Mar">Mar</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <input id="Mie" type="checkbox" class="filled-in" formControlName="mie">
+                        <label for="Mie">Mie</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <label class="control-label"></label>
+                        <input id="Jue" type="checkbox" class="filled-in" formControlName="jue">
+                        <label for="Jue">Jue</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <input id="Vie" type="checkbox" class="filled-in" formControlName="vie">
+                        <label for="Vie">Vie</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <input id="Sab" type="checkbox" class="filled-in" formControlName="sab">
+                        <label for="Sab">Sab</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-success">
+                        <input id="Dom" type="checkbox" class="filled-in" formControlName="dom">
+                        <label for="Dom">Dom</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="control-label">Desde</label>
+                      <input type="time" id="inicio" class="form-control" placeholder="08:00" formControlName="hourInit">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="control-label">Hasta</label>
+                      <input type="time" id="final" class="form-control" placeholder="20:00" formControlName="hourEnd">
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+              <div class="col-lg-5">
+                <h5>Duración de Consulta</h5>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label class="control-label">Cada</label>
+                      <select class="form-control custom-select" formControlName="duracion">
+                        <option [value]="10">10 minutos</option>
+                        <option [value]="15">15 minutos</option>
+                        <option [value]="20">20 minutos</option>
+                        <option [value]="30">30 minutos</option>
+                        <option [value]="40">40 minutos</option>
+                        <option [value]="50">50 minutos</option>
+                        <option [value]="60">1 hora</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <button class="btn btn-warning btn-block" type="submit" (click)="saveAgenda()">
+                      Generar Agenda
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

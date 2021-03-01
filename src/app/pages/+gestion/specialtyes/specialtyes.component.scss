@@ -1,0 +1,39 @@
+ul {
+    li{
+        list-style-type:none;
+        margin-top:10px;
+        text-align: left!important;
+        span{
+            margin-right:40px;
+            color:#aaaaaa;
+            text-align: right!important;
+        }
+    }
+}
+.theme-title{
+    text-align: center;
+    margin-top:20px;
+    color:#aaaaaa;
+}
+h5{
+    text-align: center;
+    color: #aaaaaa;
+}
+label{
+    font-size:.8em;
+    padding-bottom:-5px;
+}
+.containerButton{
+    display: flex;
+    align-items: flex-end;
+}
+.boton{
+    margin-bottom:15px;
+}
+.btnContainer{
+    margin-right: 5px;
+}
+.botonEdit{
+    font-size:.9em;
+    color:#000;
+}

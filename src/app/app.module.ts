@@ -33,12 +33,10 @@ import { ListarComponent } from './pages/+pacientes/listar/listar.component';
 import { DetailUserComponent } from './pages/+pacientes/detail-user/detail-user.component';
 import { AppRoutingModule } from './app.routing.module';
 import { CitasComponent } from './pages/+pacientes/citas/citas.component';
-import { DoctoresallComponent } from './doctores/doctoresall/doctoresall.component';
 import { CrearcitaComponent } from './pages/+pacientes/crearcita/crearcita.component';
 import { AlergiasComponent } from './shared/paciente/alergias/alergias.component';
 import { ContactosComponent } from './shared/paciente/contactos/contactos.component';
 import { FinanciadorComponent } from './shared/paciente/financiador/financiador.component';
-import { PacientesdoctorComponent } from './doctores/pacientesdoctor/pacientesdoctor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AllergysComponent } from './modals/allergys/allergys.component';
 import { FinancersComponent } from './modals/financers/financers.component';
@@ -63,6 +61,13 @@ import { SpotsComponent } from './pages/+doctors/spots/spots.component';
 import { SpecialtyesComponent } from './pages/+gestion/specialtyes/specialtyes.component';
 import { ProvisionsComponent } from './pages/+gestion/provisions/provisions.component';
 import { PricesComponent } from './pages/+gestion/prices/prices.component';
+import { SpecialtydeleteComponent } from './modals/specialtydelete/specialtydelete.component';
+import { SpecialtyeditComponent } from './modals/specialtyedit/specialtyedit.component';
+import { ListAllComponent } from './pages/+pacientes/list-all/list-all.component';
+import { ProvisionsDeleteComponent } from './modals/provisions-delete/provisions-delete.component';
+import { DataPatientComponent } from './modals/data-patient/data-patient.component';
+
+
 //
 
 
@@ -79,12 +84,10 @@ import { PricesComponent } from './pages/+gestion/prices/prices.component';
     ListarComponent,
     DetailUserComponent,
     CitasComponent,
-    DoctoresallComponent,
     CrearcitaComponent,
     AlergiasComponent,
     ContactosComponent,
     FinanciadorComponent,
-    PacientesdoctorComponent,
     AllergysComponent,
     FinancersComponent,
     ContactsComponent,
@@ -99,7 +102,13 @@ import { PricesComponent } from './pages/+gestion/prices/prices.component';
     SpotsComponent,
     SpecialtyesComponent,
     ProvisionsComponent,
-    PricesComponent
+    PricesComponent,
+    SpecialtydeleteComponent,
+    SpecialtyeditComponent,
+    ListAllComponent,
+    DataPatientComponent,
+    ProvisionsDeleteComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -123,7 +132,10 @@ import { PricesComponent } from './pages/+gestion/prices/prices.component';
     AllergysComponent,
     FinancersComponent,
     ContactsComponent,
-    CreateDateComponent
+    CreateDateComponent,
+    SpecialtydeleteComponent,
+    DataPatientComponent,
+    ProvisionsDeleteComponent
   ]
 })
 export class AppModule { }
