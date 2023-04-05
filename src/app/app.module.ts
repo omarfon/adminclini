@@ -66,6 +66,17 @@ import { SpecialtyeditComponent } from './modals/specialtyedit/specialtyedit.com
 import { ListAllComponent } from './pages/+pacientes/list-all/list-all.component';
 import { ProvisionsDeleteComponent } from './modals/provisions-delete/provisions-delete.component';
 import { DataPatientComponent } from './modals/data-patient/data-patient.component';
+import { AlmacenesComponent } from './pages/+maestros/almacenes/almacenes.component';
+import { CorreosComponent } from './pages/+maestros/correos/correos.component';
+import { DiagnosticosComponent } from './pages/+maestros/diagnosticos/diagnosticos.component';
+import { GenerosComponent } from './pages/+maestros/generos/generos.component';
+import { MonedaComponent } from './pages/+maestros/moneda/moneda.component';
+import { ParentescoComponent } from './pages/+maestros/parentesco/parentesco.component';
+import { SalasComponent } from './pages/+maestros/salas/salas.component';
+import { TipoCambioComponent } from './pages/+maestros/tipo-cambio/tipo-cambio.component';
+import { TiposDocumentosComponent } from './pages/+maestros/tipos-documentos/tipos-documentos.component';
+import { TurnosComponent } from './pages/+maestros/turnos/turnos.component';
+
 
 
 //
@@ -107,7 +118,17 @@ import { DataPatientComponent } from './modals/data-patient/data-patient.compone
     SpecialtyeditComponent,
     ListAllComponent,
     DataPatientComponent,
-    ProvisionsDeleteComponent
+    ProvisionsDeleteComponent,
+    AlmacenesComponent,
+    CorreosComponent,
+    DiagnosticosComponent,
+    GenerosComponent,
+    MonedaComponent,
+    ParentescoComponent,
+    SalasComponent,
+    TipoCambioComponent,
+    TiposDocumentosComponent,
+    TurnosComponent
   
   ],
   imports: [

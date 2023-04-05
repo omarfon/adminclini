@@ -26,6 +26,16 @@ import { SpecialtyesComponent } from './pages/+gestion/specialtyes/specialtyes.c
 import { ProvisionsComponent } from './pages/+gestion/provisions/provisions.component';
 import { PricesComponent } from './pages/+gestion/prices/prices.component';
 import { ListAllComponent } from './pages/+pacientes/list-all/list-all.component';
+import { AlmacenesComponent } from './pages/+maestros/almacenes/almacenes.component';
+import { CorreosComponent } from './pages/+maestros/correos/correos.component';
+import { DiagnosticosComponent } from './pages/+maestros/diagnosticos/diagnosticos.component';
+import { GenerosComponent } from './pages/+maestros/generos/generos.component';
+import { MonedaComponent } from './pages/+maestros/moneda/moneda.component';
+import { ParentescoComponent } from './pages/+maestros/parentesco/parentesco.component';
+import { SalasComponent } from './pages/+maestros/salas/salas.component';
+import { TipoCambioComponent } from './pages/+maestros/tipo-cambio/tipo-cambio.component';
+import { TiposDocumentosComponent } from './pages/+maestros/tipos-documentos/tipos-documentos.component';
+import { TurnosComponent } from './pages/+maestros/turnos/turnos.component';
 
 
 
@@ -58,6 +68,17 @@ const routes: Routes = [
       { path: 'provisions', component: ProvisionsComponent },
       { path: 'prices', component: PricesComponent },
       { path: 'provisions', component: ProvisionsComponent },
+
+      { path: 'almacenes', component: AlmacenesComponent },
+      { path: 'correos', component: CorreosComponent },
+      { path: 'diagnosticos', component: DiagnosticosComponent },
+      { path: 'generos', component: GenerosComponent },
+      { path: 'moneda', component: MonedaComponent },
+      { path: 'parentesco', component: ParentescoComponent },
+      { path: 'salas', component: SalasComponent },
+      { path: 'tipo-cambio', component: TipoCambioComponent },
+      { path: 'tipo-documento', component: TiposDocumentosComponent },
+      { path: 'turnos', component: TurnosComponent },
     ]
   },
   {
@@ -68,7 +89,6 @@ const routes: Routes = [
     component: NopagefoundComponent }, */
   { path: 'dashboard', component: DashboardComponent },
   { path: 'pages', component: PagesComponent },
-
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 
 ];
